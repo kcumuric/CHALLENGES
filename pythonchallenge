@@ -29,6 +29,8 @@ complete = False
 # Continues to prompt user to guess.
 while not complete:
     user_guess = is_integer(input("Guess an integer within the range: "))
+    
+    # Provides feedback on users guess.
     if user_guess == random_int:
         print("Congratulations! You guessed the number.")
         complete = True

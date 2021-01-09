@@ -1,9 +1,9 @@
 import random
 
-# function to check whether the argument passed is an integer.
+# Function to check whether the argument passed is an integer.
 def is_integer(x):
     while x.isdigit() == False:
-        print ("Please only enter integers")
+        print ("Please only enter integers.")
         x = input("Try again: ")
     return int(x)
 
@@ -12,6 +12,8 @@ while range == False:
     print("Please enter an integer range")  # Prompt user for range
     user_rangel = is_integer(input("Please enter the lower end of the range: "))
     user_rangeh = is_integer(input("Please enter the higher end of the range: "))
+    
+    # Checks if the range is valid or not.
     if user_rangeh < user_rangel:
         print("Range is invalid, the upper bound must be larger than the lower bound!")
     elif user_rangeh == user_rangel:
@@ -19,19 +21,20 @@ while range == False:
     else:
         range = True
 
+# Generates a random number.
 random_int = random.randint(user_rangel,user_rangeh)
 
 complete = False
 while not complete:
     user_guess = is_integer(input("Guess an integer within the range: "))
     if user_guess == random_int:
-        print("Congratulations! You guessed the number")
+        print("Congratulations! You guessed the number.")
         complete = True
     elif user_guess > user_rangeh or user_guess < user_rangel:
-        print("Incorrect. The number is not within the range")
+        print("Incorrect. The number is not within the range.")
     elif user_guess < random_int:
-        print("Incorrect. The number is higher")
+        print("Incorrect. The number is higher.")
     elif user_guess > random_int:
-        print("Incorrect. The number is lower")
+        print("Incorrect. The number is lower.")
     else:
         complete = False

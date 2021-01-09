@@ -1,5 +1,6 @@
 import random
 
+# function to check whether the argument passed is an integer.
 def is_integer(x):
     while x.isdigit() == False:
         print ("Please only enter integers")

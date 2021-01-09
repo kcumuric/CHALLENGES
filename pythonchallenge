@@ -1,0 +1,61 @@
+import random
+
+user_rangel = "int"
+# Receives user input for the lower bound and checks if what is given is an integer
+while type(user_rangel) is not int:
+  user_rangel = input("Please enter the lower end of the range: ")
+
+  if user_rangel.isdigit():
+  	user_rangel = int (user_rangel)
+  else:
+		print("Error. Only integers are allowed!")
+        
+user_rangeh = "int"
+# Receives user input for the upper bound and checks if what is given is an integer
+while type(user_rangeh) is not int:
+  user_rangeh = input("Please enter the higher end of the range: ")
+
+  if user_rangeh.isdigit():
+  	user_rangeh = int (user_rangel)
+  else:
+  	print("Error. Only integers are allowed!")
+    
+        
+#       
+complete = False
+while not complete:
+	print("Please enter an integer range") # Prompt user for range
+	user_rangel = input("Please enter the lower end of the range: ") #need to check if it's an integer, need to check if lower < higher
+  
+	user_rangeh = input("Please enter the higher end of the range: ")
+
+	#test for range
+  while user_rangeh < user_rangel:
+  	print ("Range is invalid, ")
+  	complete = False
+  while user_rangeh == user_rangel:
+  	print ("Range is equal to 0, please enter a valid range.")
+  	complete = False
+  #generate random integer within user inputted range
+	else:
+    random_int = random.randint(user_rangel,user_rangeh)
+	
+  #prompt user to guess an integer within the range
+	user_guess = input ("Guess an integer within the range: ") #need to catch if number is within range?
+  
+  if user_guess == random_int:
+  	print("Congratulations! You guessed the number")
+  	complete = True
+    
+  if not complete:
+  	if isinstance(user_guess, int) = False:
+    	print("Error. Only integers are allowed")
+      
+    elif user_guess < random_int:
+			print("Incorrect. The number is higher")
+      
+		elif user_guess > random_int: 
+			print("Incorrect. The number is lower")
+      
+  	else:
+  		complete = False

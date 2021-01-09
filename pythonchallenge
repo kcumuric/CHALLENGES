@@ -8,6 +8,7 @@ def is_integer(x):
     return int(x)
 
 range = False
+# Continues to prompt user to enter range.
 while range == False:
     print("Please enter an integer range")  # Prompt user for range
     user_rangel = is_integer(input("Please enter the lower end of the range: "))
@@ -25,6 +26,7 @@ while range == False:
 random_int = random.randint(user_rangel,user_rangeh)
 
 complete = False
+# Continues to prompt user to guess.
 while not complete:
     user_guess = is_integer(input("Guess an integer within the range: "))
     if user_guess == random_int:

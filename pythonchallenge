@@ -22,17 +22,15 @@ random_int = random.randint(user_rangel,user_rangeh)
 
 complete = False
 while not complete:
-  user_guess = is_integer(input("Guess an integer within the range: "))
-	if user_guess == random_int:
-  	print("Congratulations! You guessed the number")
-    complete = True
-
-	elif user_guess > user_rangeh or user_guess < user_rangel:
-  	print("Incorrect. The number is not within the range")
-  elif user_guess < random_int:
-  	print("Incorrect. The number is higher")
-  elif user_guess > random_int:
-  	print("Incorrect. The number is lower")
-
-	else:
-  	complete = False
+    user_guess = is_integer(input("Guess an integer within the range: "))
+    if user_guess == random_int:
+        print("Congratulations! You guessed the number")
+        complete = True
+    elif user_guess > user_rangeh or user_guess < user_rangel:
+        print("Incorrect. The number is not within the range")
+    elif user_guess < random_int:
+        print("Incorrect. The number is higher")
+    elif user_guess > random_int:
+        print("Incorrect. The number is lower")
+    else:
+        complete = False
